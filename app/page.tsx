@@ -3,7 +3,7 @@ import { Card, Divider, Subtitle, Text } from "@tremor/react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-600 to-slate-500 p-10 flex flex-col items-center justify-center">
+    <main className="min-h-screen bg-gradient-to-br from-[#394f68] to-[#183b7e] p-10 flex flex-col items-center justify-center">
       <Card className="mx-auto max-w-4xl">
         <Text className="text-6xl font-bold text-center mb-10">SkyGenius</Text>
         <Subtitle className="text-xl text-center">

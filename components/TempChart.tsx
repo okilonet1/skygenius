@@ -17,8 +17,6 @@ const TempChart: FC<TempChartProps> = ({ results }) => {
     )
     .slice(0, 24);
 
-  console.log(hourly);
-
   const data = hourly.map((hour, index) => ({
     time: Number(hour),
     "UV Index": results?.hourly.uv_index[index],

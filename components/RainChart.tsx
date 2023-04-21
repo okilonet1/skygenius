@@ -17,8 +17,6 @@ const RainChart: FC<RainChartProps> = ({ results }) => {
     )
     .slice(0, 24);
 
-  console.log(hourly);
-
   const data = hourly.map((hour, index) => ({
     time: Number(hour),
     "Rain (%)": results?.hourly.precipitation_probability[index],

@@ -6,6 +6,8 @@ import RainChart from "@/components/RainChart";
 import StatCard from "@/components/StatCard";
 import TempChart from "@/components/TempChart";
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries";
+import cleanData from "@/lib/cleanData";
+import getBasePath from "@/lib/getBasePath";
 
 type WeatherPageProps = {
   params: {
@@ -14,6 +16,8 @@ type WeatherPageProps = {
     city: string;
   };
 };
+
+export const revalidate = 60;
 
 async function WeatherPage({ params: { lat, long, city } }: WeatherPageProps) {
   const client = getClient();
@@ -30,6 +34,18 @@ async function WeatherPage({ params: { lat, long, city } }: WeatherPageProps) {
 
   const results: Root = data.myQuery;
 
+  // const dataToSend = cleanData(results, city);
+
+  // const res = await fetch(`${getBasePath()}/api/getWeatherSummary`, {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({ weatherData: dataToSend }),
+  // });
+
+  // const content = await res?.json();
+
   return (
     <div className="flex flex-col min-h-screen md:flex-row ">
       <InformationPanel city={city} lat={lat} long={long} results={results} />
@@ -45,7 +61,7 @@ async function WeatherPage({ params: { lat, long, city } }: WeatherPageProps) {
           </div>
 
           <div className="m-2 mb-10">
-            <CalloutCard message="This is a warning" />
+            {/* <CalloutCard message={content} /> */}
           </div>
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 m-2">

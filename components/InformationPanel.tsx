@@ -18,7 +18,7 @@ const InformationPanel: FC<InformationPanelProps> = ({
   results,
 }) => {
   return (
-    <div className="bg-gradient-to-br from-slate-600 to-slate-500 text-white p-10">
+    <div className="bg-gradient-to-br from-[#394f68] to-[#183b7e] text-white p-10">
       <div className="pb-5">
         <h1 className="text-6xl font-bold ">{decodeURI(city)}</h1>
         <p className="text-xs text-gray-400">
@@ -75,7 +75,7 @@ const InformationPanel: FC<InformationPanelProps> = ({
       </div>
 
       <div className="space-y-2 py-5">
-        <div className="flex items-center space-x-2 px-4 py-3 border-[#6f90cd] rounded-md bg-slate-600 ">
+        <div className="flex items-center space-x-2 px-4 py-3 border-[#6f90cd] rounded-md bg-[#394f68] ">
           <SunIcon className="h-10 w-10 text-gray-400" />
           <div className="flex-1 flex justify-between items-center">
             <p className="font-extralight">Sunrise</p>
@@ -88,7 +88,7 @@ const InformationPanel: FC<InformationPanelProps> = ({
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-2 px-4 py-3 border-[#6f90cd] rounded-md bg-slate-600 ">
+        <div className="flex items-center space-x-2 px-4 py-3 border-[#6f90cd] rounded-md bg-[#394f68] ">
           <MoonIcon className="h-10 w-10 text-gray-400" />
           <div className="flex-1 flex justify-between items-center">
             <p className="font-extralight">Sunset</p>

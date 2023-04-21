@@ -17,8 +17,6 @@ const HumidityChart: FC<HumidityChartProps> = ({ results }) => {
     )
     .slice(0, 24);
 
-  console.log(hourly);
-
   const data = hourly.map((hour, index) => ({
     time: Number(hour),
     "Humidity (%)": results?.hourly.relativehumidity_2m[index],
