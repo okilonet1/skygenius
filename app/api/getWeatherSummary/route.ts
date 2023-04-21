@@ -81,7 +81,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
       // return NextResponse.json(data.choices[0].message);
       return NextResponse.json(weatherData);
-    } catch (error) {
+    } catch (error: Error | any) {
       if (
         error.response &&
         error.response.status === 429 &&
