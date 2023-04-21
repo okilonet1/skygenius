@@ -10,11 +10,11 @@ const Loading: FC<LoadingProps> = ({}) => {
         className="h-24 w-24 animate-spin text-yellow-500"
         color="yellow"
       />
-      <h1 className="text-6xl font-bold mb-10 animate-pulse text-yellow-500">
+      <h1 className="text-6xl font-bold mb-10 animate-pulse text-center text-yellow-500">
         Loading City Weather Information
       </h1>
       <h2 className="text-xl font-bold text center mb-10 animate-pulse">
-        Hold on tight, we're getting the weather for you!
+        Hold on tight, we&apos;re getting the weather for you!
       </h2>
     </div>
   );
